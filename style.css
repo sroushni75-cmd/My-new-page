@@ -1,0 +1,563 @@
+/* Global Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+/* Main Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #87CEEB;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  padding: 8px 10px;
+}
+
+/* Top Row Layout */
+.header-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Menu Button */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #0f172a;
+  cursor: pointer;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Brand Logo */
+.brand-logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+/* Poore link ka base style */
+.brand-logo {
+  text-decoration: none;
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+/* Pehle word (Smart) ke liye */
+.brand-logo .logo-first {
+  color: #ef9917;
+  font-weight: 700;
+}
+
+/* Doosre word (Store) ke liye */
+.brand-logo .logo-second {
+  color: blue;
+  font-weight: 700;
+}
+
+
+/* Cart Button */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.action-btn {
+  position: relative;
+  background: #f1f5f9;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.action-btn:active {
+  background-color: #e2e8f0;
+}
+
+.btn-icon {
+  font-size: 1.15rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Delivery Address Row */
+.header-address-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 2px 4px;
+  width: fit-content;
+}
+
+.location-icon {
+  font-size: 1rem;
+}
+
+.address-text-box {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.deliver-label {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.user-address {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow-icon {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Bottom Row: Full-width Search Box */
+.header-bottom-row {
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  padding: 4px 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.search-box:focus-within {
+  border-color: #2563eb;
+  background-color: #ffffff;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 8px 4px;
+  font-size: 0.95rem;
+  outline: none;
+  color: #0f172a;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Main Page Content Wrapper */
+.main-content {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Categories Horizontal Scroll Strip */
+.categories-section {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.categories-section::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, mobile */
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.category-icon {
+  width: 54px;
+  height: 54px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.category-item span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Hero Offer Banner */
+.hero-banner-section {
+  width: 100%;
+}
+
+.hero-banner {
+  width: 100%;
+  background: linear-gradient(135deg, #87CEEB, #F9B7FF, #6E7F80);
+  border-radius: 12px;
+  padding: 20px 16px;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.banner-badge {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.hero-banner h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.hero-banner p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.banner-btn {
+  background-color: #ffffff;
+  color: #1e3a8a;
+  border: none;
+  padding: 7px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* Sidebar Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sidebar Drawer */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px; /* By default screen ke bahar */
+  width: 280px;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1002;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar active hone par slide hokar aayega */
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 16px;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.user-greeting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.user-avatar {
+  background: rgba(255, 255, 255, 0.2);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+}
+
+.menu-link {
+  padding: 12px 20px;
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.menu-link:active {
+  background-color: #f1f5f9;
+}
+
+/* Address Bottom Sheet & Overlay */
+.address-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1003;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.address-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.address-sheet {
+  position: fixed;
+  bottom: -100%; /* Default me niche chhipa rahega */
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px 16px 0 0;
+  padding: 12px 16px 24px;
+  z-index: 1004;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  transition: bottom 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.address-sheet.active {
+  bottom: 0;
+}
+
+.sheet-drag-handle {
+  width: 36px;
+  height: 4px;
+  background-color: #cbd5e1;
+  border-radius: 4px;
+  align-self: center;
+}
+
+.sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sheet-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.sheet-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #64748b;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Search Box inside Sheet */
+.sheet-search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 6px 12px;
+  background-color: #ffffff;
+}
+
+.sheet-search-icon {
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+.sheet-search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  color: #0f172a;
+}
+
+.sheet-save-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Location Action Button */
+.location-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.location-action .action-icon {
+  font-size: 1.3rem;
+  color: #2563eb;
+}
+
+.location-action .action-text strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #2563eb;
+}
+
+.location-action .action-text span {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.sheet-divider {
+  border: none;
+  border-top: 1px dashed #e2e8f0;
+}
+
+/* Saved Address Row */
+.saved-address-section h4 {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.saved-address-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  cursor: pointer;
+}
+
+.saved-address-item .home-icon {
+  font-size: 1.1rem;
+}
+
+.saved-details strong {
+  font-size: 0.85rem;
+  color: #0f172a;
+}
+
+.saved-details p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 2px;
+}
