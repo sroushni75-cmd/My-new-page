@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartStore - Online Shopping</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Dim Background Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- Side Navigation Drawer -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="user-greeting">
+        <span class="user-avatar">👤</span>
+        <span>Hello, User</span>
+      </div>
+      <button type="button" class="close-btn" id="close-sidebar-btn">&times;</button>
+    </div>
+
+    <nav class="sidebar-menu">
+      <a href="#" class="menu-link">🏠 Home</a>
+      <a href="#" class="menu-link">🏷️ All Deals</a>
+      <a href="#" class="menu-link">📦 My Orders</a>
+      <a href="#" class="menu-link">❤️ Wishlist</a>
+      <a href="#" class="menu-link">⚙️ Account Settings</a>
+      <a href="#" class="menu-link">📞 Help & Support</a>
+    </nav>
+  </aside>
+
+  <!-- Main Header & Navigation -->
+  <header class="main-header">
+    <div class="header-container">
+      
+      <!-- Top Row: Menu + Logo (Left) & Cart (Right) -->
+      <div class="header-top-row">
+        <div class="header-left">
+          <button type="button" class="menu-btn" id="menu-btn" aria-label="Open menu">
+            ☰
+          </button>
+          <a href="#" class="brand-logo">
+  <span class="logo-first">Smart</span>
+  <span class="logo-second">Store</span>
+</a>
+
+        </div>
+
+        <div class="header-right">
+          <button type="button" class="action-btn cart-btn" id="cart-btn" aria-label="View cart">
+            <span class="btn-icon">🛒</span>
+            <span class="cart-badge" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Middle Row: Delivery Address Bar -->
+      <div class="header-address-row" id="address-btn">
+        <span class="location-icon">📍</span>
+        <div class="address-text-box">
+          <span class="deliver-label">Deliver to</span>
+          <span class="user-address" id="display-address">Select your location</span>
+        </div>
+        <span class="arrow-icon">▾</span>
+      </div>
+
+      <!-- Bottom Row: Search Bar -->
+      <div class="header-bottom-row">
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Smartphones..." />
+          <button type="button" class="search-btn">🔍</button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- Categories Strip -->
+    <section class="categories-section">
+      <div class="category-item">
+        <div class="category-icon">🏷️</div>
+        <span>Deals</span>
+      </div>
+      <div class="category-item">
+        <div class="category-icon">👗</div>
+        <span>Fashion</span>
+      </div>
+      <div class="category-item">
+        <div class="category-icon">📱</div>
+        <span>Mobiles</span>
+      </div>
+      <div class="category-item">
+        <div class="category-icon">💍</div>
+        <span>Jewellery</span>
+      </div>
+      <div class="category-item">
+        <div class="category-icon">🎧</div>
+        <span>Gadgets</span>
+      </div>
+      <div class="category-item">
+        <div class="category-icon">🏠</div>
+        <span>Home</span>
+      </div>
+    </section>
+
+    <!-- Hero Offer Banner -->
+    <section class="hero-banner-section">
+      <div class="hero-banner">
+        <div class="banner-text">
+          <span class="banner-badge">Mega Sale</span>
+          <h2>Up to 50% Off</h2>
+          <p>Trending styles & smart gadgets</p>
+          <button type="button" class="banner-btn">Shop Now</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Address Bottom Sheet Modal -->
+  <div class="address-overlay" id="address-overlay"></div>
+
+  <div class="address-sheet" id="address-sheet">
+    <div class="sheet-drag-handle"></div>
+
+    <div class="sheet-header">
+      <h3>Select delivery address</h3>
+      <button type="button" class="sheet-close-btn" id="close-sheet-btn">&times;</button>
+    </div>
+
+    <!-- Search / Add New Input -->
+    <div class="sheet-search-box">
+      <span class="sheet-search-icon">🔍</span>
+      <input type="text" id="address-input-field" placeholder="Search by area, street name, pin code" />
+      <button type="button" class="sheet-save-btn" id="save-address-btn">Save</button>
+    </div>
+
+    <!-- Use Current Location -->
+    <div class="location-action" id="use-location-btn">
+      <span class="action-icon">🎯</span>
+      <div class="action-text">
+        <strong>Use my current location</strong>
+        <span>Allow access to location</span>
+      </div>
+    </div>
+
+    <hr class="sheet-divider" />
+
+    <!-- Saved Addresses List -->
+    <div class="saved-address-section">
+      <h4>Saved addresses</h4>
+      <div class="saved-address-item" id="saved-address-container">
+        <span class="home-icon">🏠</span>
+        <div class="saved-details">
+          <strong id="saved-address-title">Home</strong>
+          <p id="saved-address-text">No saved address yet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JavaScript: Poore HTML ke baad, bilkul aakhri me -->
+  <script src="app.js"></script>
+</body>
+</html>
